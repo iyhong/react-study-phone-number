@@ -3,18 +3,15 @@ import PhoneForm from './components/PhoneForm';
 import PhoneInfoList from './components/PhoneInfoList';
 
 function App() {
-
-  const [name] = useState('gg')
-  const [count, setCount] = useState(0)
-
+  
   let age = 5;
   // let id = useState(0)
-  const id = useState(3)
-  let getId = id[0];
-  const setId = id[1];
   
-
-  const information = useState([
+  const [name, setName] = useState('gg')
+  const [count, setCount] = useState(0)
+  const [id, setId] = useState(3)
+  const [keyword, setKeyword] = useState('');
+  const [information, setInfomation] = useState([
     {
       id: 0,
       name: '홍길동',
@@ -31,27 +28,28 @@ function App() {
       phone: '010-2113-1000'
     }
   ]);
-  const arrInfo = information[0];
-  const setInfo = information[1];
 
+  const handleChange = (e) => {
+    setKeyword(e.target.value)
+  }
 
   const handleCreate = (data) => {
-    console.log(getId)
-    setInfo(arrInfo.concat({
+    console.log(id)
+    setInfomation(information.concat({
       ...data,
-      id: getId
+      id: id
     }));
     age = age+1;
-    setId(getId+1);
+    setId(id+1);
   }
 
   const handleRemove = (id)=>{
     console.log('handleRemove')
-    setInfo(arrInfo.filter(info => info.id !== id))
+    setInfomation(information.filter(info => info.id !== id))
   }
 
   const handleUpdate = (id, data) =>{
-    setInfo(arrInfo.map(info => {
+    setInfomation(information.map(info => {
       if(info.id === id) return {id, ...data}
       else return info;
     }))
@@ -60,8 +58,13 @@ function App() {
   return (
     <div className="App">
       <PhoneForm onCreate={handleCreate}/>
+      <input 
+        value={keyword} 
+        onChange={handleChange} 
+        placeholder="검색..."
+      />
       <PhoneInfoList 
-        data={arrInfo}
+        data={information.filter(info=>info.name.indexOf(keyword)>-1)}
         onRemove={handleRemove}
         onUpdate={handleUpdate}
         />
