@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import PhoneForm from './components/PhoneForm';
+import PhoneInfoList from './components/PhoneInfoList';
 
 function App() {
 
@@ -27,10 +28,18 @@ function App() {
     setId(getId+1);
   }
 
+  const handleRemove = (id)=>{
+    console.log('handleRemove')
+    setInfo(arrInfo.filter(info => info.id !== id))
+  }
+
   return (
     <div className="App">
       <PhoneForm onCreate={handleCreate}/>
-      {JSON.stringify(arrInfo)}
+      <PhoneInfoList 
+        data={arrInfo}
+        onRemove={handleRemove}
+        />
     </div>
   );
 }
