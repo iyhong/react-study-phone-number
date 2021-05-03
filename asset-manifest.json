@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-study-phone-number/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/react-study-phone-number/static/js/main.6f91c202.chunk.js",
+    "main.js.map": "/react-study-phone-number/static/js/main.6f91c202.chunk.js.map",
+    "runtime-main.js": "/react-study-phone-number/static/js/runtime-main.1c280387.js",
+    "runtime-main.js.map": "/react-study-phone-number/static/js/runtime-main.1c280387.js.map",
+    "static/js/2.0238ab51.chunk.js": "/react-study-phone-number/static/js/2.0238ab51.chunk.js",
+    "static/js/2.0238ab51.chunk.js.map": "/react-study-phone-number/static/js/2.0238ab51.chunk.js.map",
+    "static/js/3.5c157b89.chunk.js": "/react-study-phone-number/static/js/3.5c157b89.chunk.js",
+    "static/js/3.5c157b89.chunk.js.map": "/react-study-phone-number/static/js/3.5c157b89.chunk.js.map",
+    "index.html": "/react-study-phone-number/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/react-study-phone-number/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.0238ab51.chunk.js.LICENSE.txt": "/react-study-phone-number/static/js/2.0238ab51.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c280387.js",
+    "static/js/2.0238ab51.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.6f91c202.chunk.js"
+  ]
+}
